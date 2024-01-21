@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="mt-3 container">
+    <h2>Digital Twin Evropská – Technical Brief</h2>
+        <p>
+        The Digital Twin Evropská represents an on-line calibrated digital model of an area around Evropská street
+        in Prague that takes into account individual personal transport, public transport and (to some extent)
+        pedestrians and other vulnerable road users. The system is built around Eclipse SUMO traffic microsimulator,
+        an open-source system that is being developed at German DLR.
+        </p>
+        <p>
+            The system consists of two key components:
+        </p>
+        <ul>
+            <li>
+                Data concentrator, a system that is responsible for receiving input data from different sources,
+                and that is capable of basic pre-processing
+            </li>
+            <li>
+                Digital twin system, represented by a custom extension to SUMO
+            </li>
+        </ul>
+
+<h3>Data concentrator (Datastore)</h3>
+
+<p>Due to the need to maintain a relatively
+low data flow to and from the optional cloud storage, data from the detectors
+are stored in a dedicated database at the premises of the Czech Technical
+University in Prague in the intermediate phase, from where a subset of them is
+further distributed. These data are then used to generate traffic simulations,
+predictions and modelling of traffic scenarios, allowing road managers to
+better plan and manage traffic.</p>
+
+<p><img width=605 height=211 id="Obrázek 1" src="/static/about001.png" alt="todo"></p>
+
+<h3>Digital twin</h3>
+
+<p>The basis of the simulation model of the
+transport digital twin is a virtual copy of the existing transport
+infrastructure in the modelled area: a microsimulation model contains
+individual streets, parking lots, public transport interchanges, bus stops, together
+with information about commercial and cultural centres or residential areas.
+For initial calibration purposes, this model is linked to off-line (historical)
+data provided by the concentrator and is calibrated according to this data. The
+digital twin then uses a statistical modelling approach for continuous
+calibration of the model that results in changes in the routes of the simulated
+vehicles and perturbation in vehicle demand.</p>
+
+<p><img width=605 height=227 id="Obrázek 2" src="/static/about002.png" alt="todo"></p>
+
+<p>The digital twin over the off-line data
+uses a total of three custom extensions for SUMO and one separate computational
+subsystem responsible for adapting the microsimulation to the measured data.
+The basic tasks of these modules are as follows:</p>
+
+<p><b>TraCI flow input</b> &mdash; This module first determines which traffic data from specific
+traffic detectors should be used as inputs and then sequentially retrieves the
+data from the traffic detectors and generates a traffic demand for the
+microsimulation. Based on the information about typical trips that start at a
+given traffic network entry during a given simulation period, the module
+instructs the microsimulation to instantiate a certain type of vehicle to enter
+a certain edge of the modelled traffic network.</p>
+
+<p><b>TraCI detector output</b> &mdash; This module represents the &quot;counterpart&quot; to the input
+module. It continuously aggregates information from the traffic detectors in
+the simulation so that the temporal resolution of this information matches the
+temporal resolution of the real measurements. This aggregated data is both
+stored by the module in the form of XML and CSV files and are also provided to the
+Path flow estimation and route adaptation system for estimating the most
+probable paths and traffic flows.</p>
+
+<p><b>Path flow estimation and route adaptation</b> is a module that uses statistical
+methods over a state-space model to make a short-term prediction of the traffic
+evolution in the real world and in the traffic microsimulation model, and based
+on this prediction determines, in which areas of the traffic model there will
+be significant deviations from the predicted values and which modelled traffic
+flows need to be changed so that the short-term prediction of the traffic state
+in the model corresponds to the short-term prediction of traffic in the real
+world.</p>
+
+<p><b>TraCI continuous calibration</b> uses information about typical vehicle routes in the modelled area
+and the differences between the detected vehicle counts in the microsimulation
+and in the real area to modify, if necessary, the future vehicle routes in the
+simulation so that the simulation more faithfully matches the short-term
+prediction of the traffic condition in the modelled area by the system for
+estimating the most likely routes and traffic flows described above.</p>
+
+<h3>Contacts</h3>
+
+        <p>Jan Přikryl (<a href="mailto:jan.prikryl@cvut.cz">jan.prikryl@cvut.cz</a>)</p>
+
+    </div>
+{%  endblock %}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ map_header|safe }}
+    <meta charset="UTF-8">
+    <title>Traffic Info Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #map_container {
+            height: 600px;
+            width: 100%;
+        }
+        .traffic-info {
+            margin-top: 20px;
+        }
+        .leaflet-container.crosshair-cursor-enabled {
+            cursor:crosshair;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            /* text-align: center; */
+        }
+        .footer img {
+            height: 50px; /* Set a specific height */
+            object-fit: contain; /* Ensure logos maintain aspect ratio */
+            margin: 10px;
+        }
+        .funding-logo {
+            margin-bottom: 20px;
+        }
+        .company-logos .col {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.3.1"></script>
+    <!-- jQuery is provided by Leaflet ... script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+  <header class="p-3 text-bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <h1>D3E - Digital twin Evropská</h1>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="/" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="/status" class="nav-link px-2 text-white">Status</a></li>
+          <li><a href="/about" class="nav-link px-2 text-white">About</a></li>
+        </ul>
+
+        <div class="text-end">
+          <a href="/login" class="btn btn-outline-light me-2 text-decoration-none">Login</a>
+          <a href="/register" class="btn btn-warning text-decoration-none">Sign-up</a>
+        </div>
+      </div>
+    </div>
+  </header>
+{%  block content %}{% endblock %}
+    <footer class="footer">
+        <div class="container">
+            <!-- Funding agency logo -->
+            <div class="row funding-logo">
+                <div class="col-8">
+                    <img src="{{ url_for('static', filename='logo_TACR_zakl.png') }}" alt="Funded by TA CR">
+                    <img src="{{ url_for('static', filename='logo_TACR_doprava2020plus.png') }}" alt="Programme logo">
+                </div>
+                <div class="col-4">
+                    <p style="text-align: right;">
+                        (c) 2024 ČVUT FD, UVT FST, PATRIC, SmartPlan, TSK Praha<br/>
+                        Vytvořeno v rámci projektu TAČR <a href="https://starfos.tacr.cz/projekty/CK02000118">CK02000118</a>.
+                    </p>
+                </div>
+            </div>
+            <!-- Company logos -->
+            <div class="row company-logos">
+                <div class="col">
+                    <img src="{{ url_for('static', filename='logo_FD.jpg') }}" alt="ČVUT FD">
+                </div>
+                <div class="col">
+                    <img src="{{ url_for('static', filename='logo_VUT_FAST_barevne_RGB_CZ.png') }}" alt="VUT FAST">
+                </div>
+                <div class="col">
+                    <img style="height: 42px;" src="{{ url_for('static', filename='logo_PATRIC.png') }}" alt="Patric">
+                </div>
+                <div class="col">
+                    <img style="height: 92px;" src="{{ url_for('static', filename='logo_smartplan.svg') }}" alt="SmartPlan">
+                </div>
+                <div class="col">
+                    <img src="{{ url_for('static', filename='logo_TSK_2024.svg') }}" alt="TSK">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+        {{ map_script|safe }}
+
+        // chart window
+
+        // Globally visible chart object
+        let d3e_chart = null;
+        // Globally visible interval memory
+        let d3e_interval = null;
+
+        function fetchChartUpdates() {
+            // Fetch current chart data from the server
+            const params = {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({loc_id: d3e_chart.loc_id})
+            }
+            fetch('/get-chart-update', params)
+                .then(response => response.json())
+                .then(data => {
+                    d3e_chart.data.labels = data.timestamps;
+                    d3e_chart.data.datasets[0].data = data.values;
+                    d3e_chart.update();
+                });
+        }
+
+        function onMapClick(e) {
+            var lat = e.latlng.lat;
+            var lng = e.latlng.lng;
+
+            // Fetch information from the server
+            $.ajax({
+                url: "/get-chart",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify({ lat: lat, lng: lng }),
+                success: function(response) {
+                    var popup = L.popup({maxWidth: '600'})
+                        .setLatLng(e.latlng)
+                        .setContent(
+                            // "Coordinates: " + lat + ", " + lng +
+                            response.info +
+                            '<br><canvas id="d3e_chart" width="600" height="300"></canvas>')
+                        .openOn({{ map_name }});
+                    const ctx = document.getElementById('d3e_chart').getContext('2d');
+                    d3e_chart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: response.timestamps,
+                            datasets: [{
+                                label: 'Traffic volume',
+                                data: response.values,
+                                borderColor: 'rgba(75, 192, 192, 1)',
+                                borderWidth: 1,
+                                fill: false
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                x: {
+                                    type: 'time',
+                                }
+                            }
+                        }
+                    });
+                    // Add information abot location id to the chart object
+                    d3e_chart.loc_id = response.loc_id;
+                    // Erase former interval
+                    if (d3e_interval) clearInterval(d3e_interval);
+                    // Fetch chart updates every 60 seconds
+                    d3e_interval = setInterval(fetchChartUpdates, 60000);
+                },
+                error: function(error) {
+                    alert('Error fetching chart information');
+                }
+            });
+        }
+
+        // Function to fetch information about last stats updates from the server
+        function fetchUpdates() {
+            fetch('/get-last-update')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('last_update_content').textContent = data.last_update;
+                })
+                .catch(error => console.error('Error fetching status update:', error));
+        }
+
+        $(document).ready(function() {
+            {{ map_name }}.on('click', onMapClick);
+            // https://stackoverflow.com/questions/14106687/how-do-i-change-the-default-cursor-in-leaflet-maps
+            L.DomUtil.addClass({{ map_name }}._container, 'crosshair-cursor-enabled');
+            // Fetch updates every 10 seconds
+            setInterval(fetchUpdates, 10000);
+            // Initial fetch
+            fetchUpdates();
+        });
+    </script>
+</body>
+</html>

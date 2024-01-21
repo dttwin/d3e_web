@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="mt-3 container">
+        <h2>System status</h2>
+        <p><strong>Last data update:</strong> <span id="last_update_content">Waiting for update...</span></p>
+        <p><strong>Average SCALA lag in last 60 minutes:</strong> <span id="average_lag">{{ '%0.2f'|format(average_lag) }} min</span></p>
+        <p><strong>Database capacity:</strong> <span id="db_capacity">{{ db_capacity }}% free</span></p>
+        <p><strong>Simulation running:</strong> <span id="is_running">NO</span></p>
+        <p>
+            Note: This list serves solely as a demonstration of system parameters report. Different parameters
+            are available and can be reported depending on users' wishes.
+        </p>
+    </div>
+{%  endblock %}

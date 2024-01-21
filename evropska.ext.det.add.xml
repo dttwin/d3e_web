@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Digital twin Evropská - detector file.
+    
+    This file contains detector definitions for detectors that are located
+    on standard lanes of a network. This detector file can be loaded and
+    edited using netedit.    
+-->
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <!-- Induction loops -->
+    <inductionLoop id="6.115_DTA1.0" lane="10198_0" pos="103.07" period="60.00" file="outputs/dets/6.115_DTA1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.115_DTC1.0" lane="10308_0" pos="306.83" period="60.00" file="outputs/dets/6.115_DTC1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.118_DTA1.0" lane="10298_0" pos="34.08" period="60.00" file="outputs/dets/6.118_DTA1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.118_DTA2.0" lane="10299_1" pos="104.06" period="60.00" file="outputs/dets/6.118_DTA2.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.118_DTD1.0" lane="10195_1" pos="11.40" period="60.00" file="outputs/dets/6.118_DTD1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.118_DTD2.0" lane="10196_0" pos="304.79" period="60.00" file="outputs/dets/6.118_DTD2.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.120_DTA1.0" lane="10317_0" pos="185.42" period="60.00" file="outputs/dets/6.120_DTA1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.120_DTA2.0" lane="10317_0" pos="475.42" period="60.00" file="outputs/dets/6.120_DTA2.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.120_DTA3.0" lane="10317_0" pos="557.92" period="60.00" file="outputs/dets/6.120_DTA3.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.120_DTD1.0" lane="10205_0" pos="6.18" period="60.00" file="outputs/dets/6.120_DTD1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.120_DTD2.0" lane="10206_0" pos="150.94" period="60.00" file="outputs/dets/6.120_DTD2.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.120_DTD3.0" lane="10206_0" pos="223.44" period="60.00" file="outputs/dets/6.120_DTD3.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.120_DVA" lane="10274_1" pos="-55.00" period="60.00" file="outputs/dets/6.120_DVA.out.xml"/>
+    <!-- virtual inductionLoop id="6.120_DVAx" lane="10274_2" pos="-55.00" period="300.00" file="outputs/dets/6.120_DVAx.out.xml"/ -->
+    <inductionLoop id="6.120_DVB.0" lane="10274_3" pos="72.09" period="60.00" file="outputs/dets/6.120_DVB.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.120_DVB1" lane="10274_3" pos="-38.00" period="60.00" file="outputs/dets/6.120_DVB1.out.xml"/>
+    <inductionLoop id="6.120_DVE.0" lane="10275_3" pos="31.77" period="60.00" file="outputs/dets/6.120_DVE.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.120_DVE1.0" lane="10275_3" pos="5.87" period="60.00" file="outputs/dets/6.120_DVE1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.131_DBA1M1.0" lane="10082_2" pos="262.66" period="60.00" file="outputs/dets/6.131_DBA1M.0.out.xml" vTypes="bus" friendlyPos="1"/>
+    <inductionLoop id="6.131_DBA1M2.0" lane="10082_2" pos="62.66" period="60.00" file="outputs/dets/6.131_DBA1Mx.0.out.xml" vTypes="bus" friendlyPos="1"/>
+    <inductionLoop id="6.131_DBA1R1.0" lane="10082_1" pos="262.66" period="60.00" file="outputs/dets/6.131_DBA1R.0.out.xml" vTypes="bus" friendlyPos="1"/>
+    <inductionLoop id="6.131_DBA1R2.0" lane="10082_1" pos="62.66" period="60.00" file="outputs/dets/6.131_DBA1Rx.0.out.xml" vTypes="bus" friendlyPos="1"/>
+    <inductionLoop id="6.131_DBA2M.0" lane="10082_2" pos="310.16" period="60.00" file="outputs/dets/6.131_DBA2M.0.out.xml" vTypes="bus" friendlyPos="1"/>
+    <inductionLoop id="6.131_DBA2R.0" lane="10082_1" pos="310.16" period="60.00" file="outputs/dets/6.131_DBA2R.0.out.xml" vTypes="bus" friendlyPos="1"/>
+    <inductionLoop id="6.131_DBB1M1.0" lane="10064_1" pos="426.77" period="60.00" file="outputs/dets/6.131_DBB1M.0.out.xml" vTypes="bus" friendlyPos="1"/>
+    <inductionLoop id="6.131_DBB1M2.0" lane="10064_1" pos="226.77" period="60.00" file="outputs/dets/6.131_DBB1Mx.0.out.xml" vTypes="bus" friendlyPos="1"/>
+    <inductionLoop id="6.131_DBB2M.0" lane="10034_1" pos="9.32" period="60.00" file="outputs/dets/6.131_DBB2M.0.out.xml" vTypes="bus" friendlyPos="1"/>
+    <inductionLoop id="6.131_DBC1M1.0" lane="10356_1" pos="58.76" period="60.00" file="outputs/dets/6.131_DBC1M.0.out.xml" vTypes="bus" friendlyPos="1"/>
+    <inductionLoop id="6.131_DBC1M2.0" lane="10356_1" pos="18.76" period="60.00" file="outputs/dets/6.131_DBC1Mx.0.out.xml" vTypes="bus" friendlyPos="1"/>
+    <inductionLoop id="6.131_DBC2M.0" lane="10356_1" pos="106.26" period="60.00" file="outputs/dets/6.131_DBC2M.0.out.xml" vTypes="bus" friendlyPos="1"/>
+    <inductionLoop id="6.131_DBD1L1.0" lane="10425_1" pos="270.08" period="60.00" file="outputs/dets/6.131_DBD1Lx.0.out.xml" vTypes="bus" friendlyPos="1"/>
+    <inductionLoop id="6.131_DBD1L2.0" lane="10425_1" pos="270.08" period="60.00" file="outputs/dets/6.131_DBD1Mx.0.out.xml" vTypes="bus" friendlyPos="1"/>
+    <inductionLoop id="6.131_DBD2L.0" lane="10058_2" pos="15.49" period="60.00" file="outputs/dets/6.131_DBD2L.0.out.xml" vTypes="bus" friendlyPos="1"/>
+    <!-- not present inductionLoop id="6.131_DBD2M.0" lane="10058_1" pos="15.49" period="60.00" file="outputs/dets/6.131_DBD2M.0.out.xml" vTypes="bus" friendlyPos="1"/ -->
+    <inductionLoop id="6.131_DTA1.0" lane="10300_0" pos="203.63" period="60.00" file="outputs/dets/6.131_DTA1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.131_DTA2.0" lane="10301_1" pos="63.06" period="60.00" file="outputs/dets/6.131_DTA2.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.131_DTC1.0" lane="10194_0" pos="34.94" period="60.00" file="outputs/dets/6.131_DTC1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.131_DTC2.0" lane="10195_1" pos="50.11" period="60.00" file="outputs/dets/6.131_DTC2.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.132_DTA1.0" lane="10301_1" pos="24.88" period="60.00" file="outputs/dets/6.132_DTA1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.132_DTA2.0" lane="10302_0" pos="105.82" period="60.00" file="outputs/dets/6.132_DTA2.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.132_DTC1.0" lane="10212_1" pos="29.21" period="60.00" file="outputs/dets/6.132_DTC1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.132_DTC2.0" lane="10193_0" pos="207.06" period="60.00" file="outputs/dets/6.132_DTC2.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.138_DTB1.0" lane="10202_0" pos="18.10" period="60.00" file="outputs/dets/6.138_DTB1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.138_DTB2.0" lane="10202_0" pos="302.10" period="60.00" file="outputs/dets/6.138_DTB2.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.138_DTD1.0" lane="10315_1" pos="5.54" period="60.00" file="outputs/dets/6.138_DTD1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.138_DTD2.0" lane="10316_0" pos="89.29" period="60.00" file="outputs/dets/6.138_DTD2.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.145_DSE.0" lane="10179_0" pos="32.64" period="60.00" file="outputs/dets/6.145_DSE.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.145_DSE1.0" lane="10179_0" pos="0.00" period="60.00" file="outputs/dets/6.145_DSE1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.145_DTB1L.0" lane="10377_0" pos="86.68" period="60.00" file="outputs/dets/6.145_DTB1.0.out.xml" vTypes="tram" friendlyPos="1"/>
+    <!-- no info about location of DTB1R -->
+    <inductionLoop id="6.145_DTB2.0" lane="10377_0" pos="308.68" period="60.00" file="outputs/dets/6.145_DTB2.0.out.xml" vTypes="tram" friendlyPos="1"/>
+    <inductionLoop id="6.145_DTB3.0" lane="10377_0" pos="319.18" period="60.00" file="outputs/dets/6.145_DTB3.0.out.xml" vTypes="tram" friendlyPos="1"/>
+    <inductionLoop id="6.145_DTD1M.0" lane="10408_0" pos="206.66" period="60.00" file="outputs/dets/6.145_DTD1.0.out.xml" vTypes="tram" friendlyPos="1"/>
+    <!-- no info about location of DTD1R -->
+    <inductionLoop id="6.145_DTD2.0" lane="10408_0" pos="422.66" period="60.00" file="outputs/dets/6.145_DTD2.0.out.xml" vTypes="tram" friendlyPos="1"/>
+    <inductionLoop id="6.145_DTD2`.0" lane="10408_0" pos="420.88" period="60.00" file="outputs/dets/6.145_DTD2a.0.out.xml" vTypes="tram" friendlyPos="1"/>
+    <inductionLoop id="6.145_DTD3.0" lane="10409_0" pos="65.79" period="60.00" file="outputs/dets/6.145_DTD3.0.out.xml" vTypes="tram" friendlyPos="1"/>
+    <inductionLoop id="6.145_DTD3`.0" lane="10410_0" pos="59.51" period="60.00" file="outputs/dets/6.145_DTD3a.0.out.xml" vTypes="tram" friendlyPos="1"/>
+    <!-- not present inductionLoop id="6.145_DTG1.0" lane="10422_1" pos="0.44" period="60.00" file="outputs/dets/6.145_DTG1.0.out.xml" vTypes="tram" friendlyPos="1"/ -->
+    <inductionLoop id="6.145_DTG2.0" lane="10423_1" pos="74.47" period="60.00" file="outputs/dets/6.145_DTG2.0.out.xml" vTypes="tram" friendlyPos="1"/>
+    <inductionLoop id="6.145_DTG3.0" lane="10423_1" pos="85.97" period="60.00" file="outputs/dets/6.145_DTG3.0.out.xml" vTypes="tram" friendlyPos="1"/>
+    <inductionLoop id="6.145_DVA.0" lane="10403_0" pos="68.33" period="60.00" file="outputs/dets/6.145_DVA.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.145_DVA1.0" lane="10403_0" pos="20.83" period="60.00" file="outputs/dets/6.145_DVA1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.145_DVC.0" lane="10370_1" pos="162.58" period="60.00" file="outputs/dets/6.145_DVC.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.145_DVC1.0" lane="10370_1" pos="115.08" period="60.00" file="outputs/dets/6.145_DVC1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.145_DVE.0" lane="10179_1" pos="32.64" period="60.00" file="outputs/dets/6.145_DVE.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.145_DVE1.0" lane="10179_1" pos="0.00" period="60.00" file="outputs/dets/6.145_DVE1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.145_DVE1`.0" lane="10179_2" pos="0.00" period="60.00" file="outputs/dets/6.145_DVE1a.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.145_DVE`.0" lane="10179_2" pos="32.64" period="60.00" file="outputs/dets/6.145_DVEa.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.145_DVG.0" lane="10187_3" pos="86.68" period="60.00" file="outputs/dets/6.145_DVG.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.145_DVG1.0" lane="10187_3" pos="37.18" period="60.00" file="outputs/dets/6.145_DVG1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.157_DTA1.0" lane="10307_0" pos="198.80" period="60.00" file="outputs/dets/6.157_DTA1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.157_DTA2.0" lane="10308_0" pos="427.53" period="60.00" file="outputs/dets/6.157_DTA2.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.157_DTC2.0" lane="10209_1" pos="70.26" period="60.00" file="outputs/dets/6.157_DTC2.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.199_DVA1.0" lane="10354_0" pos="198.59" period="60.00" file="outputs/dets/6.199_DVA1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.199_DVA1`.0" lane="10354_1" pos="198.59" period="60.00" file="outputs/dets/6.199_DVA1a.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.199_DVA2.0" lane="10354_0" pos="70.59" period="60.00" file="outputs/dets/6.199_DVA2.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.199_DVA2`.0" lane="10354_0" pos="70.59" period="60.00" file="outputs/dets/6.199_DVA2a.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.199_DVB1.0" lane="10121_1" pos="315.52" period="60.00" file="outputs/dets/6.199_DVB1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.199_DVB1`.0" lane="10121_2" pos="315.52" period="60.00" file="outputs/dets/6.199_DVB1a.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.836_DTA1.0" lane="10408_0" pos="431.20" period="60.00" file="outputs/dets/6.836_DTA1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.836_DTA2.0" lane="10418_0" pos="85.32" period="60.00" file="outputs/dets/6.836_DTA2.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.836_DTB1.0" lane="10402_0" pos="85.11" period="60.00" file="outputs/dets/6.836_DTB1.0.out.xml" friendlyPos="1"/>
+    <inductionLoop id="6.836_DTB2.0" lane="10422_1" pos="3.97" period="60.00" file="outputs/dets/6.836_DTB2.0.out.xml" friendlyPos="1"/>
+    <!-- Video detection -->
+    <laneAreaDetector id="6.115_DVA1.0" lane="10339_2" pos="33.33" length="50.00" period="60.00" file="outputs/dets/6.115_DVA1.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.115_DVA1`.0" lane="10339_1" pos="33.33" length="50.00" period="60.00" file="outputs/dets/6.115_DVA1a.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.115_DVB1.0" lane="10151_1" pos="87.86" length="50.00" period="60.00" file="outputs/dets/6.115_DVB.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.115_DVC1.0" lane="10148_1" pos="0.00" length="22.86" period="60.00" file="outputs/dets/6.115_DVC1.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.115_DVC1.1" lane="10147_1" pos="51.37" length="27.14" period="60.00" file="outputs/dets/6.115_DVC1.1.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.115_DVC1`.0" lane="10148_2" pos="0.00" length="22.86" period="60.00" file="outputs/dets/6.115_DVC1a.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.115_DVC1`.1" lane="10147_2" pos="51.37" length="27.14" period="60.00" file="outputs/dets/6.115_DVC1a.1.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.115_DVC1``.0" lane="10148_3" pos="14.86" length="8.00" period="60.00" file="outputs/dets/6.115_DVC1b.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.115_DVD1.0" lane="10360_1" pos="72.98" length="25.00" period="60.00" file="outputs/dets/6.115_DVD1.0.out.xml" friendlyPos="1"/>
+    <!-- 6.118 -->
+    <laneAreaDetector id="6.118_DVA1" lane="10279_1" endPos="-0.01" length="63" period="60.00" file="outputs/dets/6.118_DVA1.out.xml"/>
+    <!-- laneAreaDetector id="6.118_DVA1x" lane="10279_2" endPos="-0.01" length="60" period="60.00" file="outputs/dets/6.118_DVA1x.out.xml"/ -->
+    <laneAreaDetector id="6.118_DVB1" lane="10279_3" endPos="-0.01" length="33.00" period="60.00" file="outputs/dets/6.118_DVB1.out.xml"/>
+    <laneAreaDetector id="6.118_DVC1" lane="10057_1" endPos="-0.01" length="24.00" period="60.00" file="outputs/dets/6.118_DVC1.out.xml"/>
+    <!-- laneAreaDetector id="6.118_DVC1x" lane="10057_2" endPos="-0.01" length="50" period="60.00" file="outputs/dets/6.118_DVC1x.out.xml"/ -->
+    <laneAreaDetector id="6.118_DVD1" lane="10278_1" endPos="-0.01" length="63" period="60.00" file="outputs/dets/6.118_DVD1.out.xml"/>
+    <!-- laneAreaDetector id="6.118_DVD1x" lane="10278_2" endPos="-0.01" length="60" period="60.00" file="outputs/dets/6.118_DVD1x.out.xml"/ -->
+    <laneAreaDetector id="6.118_DVE1" lane="10278_3" endPos="-0.01" length="33" period="60.00" file="outputs/dets/6.118_DVE1.out.xml"/>
+    <laneAreaDetector id="6.118_DVF1" lane="10381_1" pos="2.94" length="40.00" period="60.00" file="outputs/dets/6.118_DVF1.out.xml" friendlyPos="1"/>
+    <!-- laneAreaDetector id="6.118_DVF1x" lane="10381_2" pos="2.94" length="40.00" period="60.00" file="outputs/dets/6.118_DVF1x.out.xml" friendlyPos="1"/ -->
+    <!-- 6.120 -->
+    <laneAreaDetector id="6.120_DVC" lane="10073_1" endPos="-0.01" length="20" period="60.00" file="outputs/dets/6.120_DVC.out.xml"/>
+    <!-- laneAreaDetector id="6.120_DVCx" lane="10073_2" endPos="-0.01" length="30" period="60.00" file="outputs/dets/6.120_DVCx.out.xml"/ -->
+    <laneAreaDetector id="6.131_DVA1.0" lane="10082_1" pos="262.66" length="50.00" period="60.00" file="outputs/dets/6.131_DVA1.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.131_DVA2.0" lane="10082_2" pos="262.66" length="50.00" period="60.00" file="outputs/dets/6.131_DVA2.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.131_DVB1.0" lane="10034_1" pos="0.00" length="11.82" period="60.00" file="outputs/dets/6.131_DVB1.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.131_DVB1.1" lane="10064_1" pos="426.77" length="38.18" period="60.00" file="outputs/dets/6.131_DVB1.1.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.131_DVB1`.0" lane="10034_2" pos="0.00" length="11.82" period="60.00" file="outputs/dets/6.131_DVB2.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.131_DVB1`.1" lane="10064_1" pos="426.77" length="38.18" period="60.00" file="outputs/dets/6.131_DVB2.1.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.131_DVC1.0" lane="10356_1" pos="58.76" length="50.00" period="60.00" file="outputs/dets/6.131_DVC1.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.131_DVC1`.0" lane="10356_2" pos="58.76" length="50.00" period="60.00" file="outputs/dets/6.131_DVC2.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.131_DVD1.0" lane="10058_1" pos="0.00" length="17.99" period="60.00" file="outputs/dets/6.131_DVD1.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.131_DVD1.1" lane="10425_1" pos="285.08" length="32.01" period="60.00" file="outputs/dets/6.131_DVD1.1.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.131_DVD1`.0" lane="10058_2" pos="0.00" length="17.99" period="60.00" file="outputs/dets/6.131_DVD2.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.131_DVD1`.1" lane="10425_1" pos="285.08" length="32.01" period="60.00" file="outputs/dets/6.131_DVD2.1.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.145_DVB1.0" lane="10403_1" pos="10.83" length="60.00" period="60.00" file="outputs/dets/6.145_DVB1.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.145_DVB1`.0" lane="10403_2" pos="10.83" length="60.00" period="60.00" file="outputs/dets/6.145_DVB1a.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.145_DVD1.0" lane="10370_2" pos="105.08" length="60.00" period="60.00" file="outputs/dets/6.145_DVD1.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.145_DVD1`.0" lane="10370_3" pos="105.08" length="60.00" period="60.00" file="outputs/dets/6.145_DVD1a.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.145_DVF1.0" lane="10187_1" pos="29.18" length="60.00" period="60.00" file="outputs/dets/6.145_DVF1.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.145_DVF1`.0" lane="10187_2" pos="33.18" length="56.00" period="60.00" file="outputs/dets/6.145_DVF1a.0.out.xml" friendlyPos="1"/>
+    <!-- 6.157 -->
+    <laneAreaDetector id="6.157_DVA" lane="10336_1" pos="328.29" length="50.00" period="60.00" file="outputs/dets/6.157_DVA.out.xml"/>
+    <!-- laneAreaDetector id="6.157_DVAx" lane="10336_2" pos="328.29" length="50.00" period="60.00" file="outputs/dets/6.157_DVAx.out.xml"/  -->
+    <laneAreaDetector id="6.157_DVC" lane="10122_1" pos="33.22" length="50.00" period="60.00" file="outputs/dets/6.157_DVC.out.xml"/>
+    <!-- laneAreaDetector id="6.157_DVCx" lane="10122_2" pos="33.22" length="50.00" period="60.00" file="outputs/dets/6.157_DVCx.out.xml"/ -->
+    <laneAreaDetector id="6.188_DVA1.0" lane="10266_1" pos="9.40" length="36.00" period="60.00" file="outputs/dets/6.188_DVA.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.188_DVA1a.0" lane="10266_2" pos="9.40" length="36.00" period="60.00" file="outputs/dets/6.188_DVAa.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.188_DVC1.0" lane="10155_1" pos="11.23" length="40.00" period="60.00" file="outputs/dets/6.188_DVC.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.188_DVC1a.0" lane="10155_2" pos="11.23" length="40.00" period="60.00" file="outputs/dets/6.188_DVCa.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.188_DVE1.0" lane="10106_1" pos="25.38" length="25.00" period="60.00" file="outputs/dets/6.188_DVE.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.199_DVA.0" lane="10354_0" pos="152.59" length="50.00" period="60.00" file="outputs/dets/6.199_DVA.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.199_DVA`.0" lane="10354_1" pos="152.59" length="50.00" period="60.00" file="outputs/dets/6.199_DVAa.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.199_DVB1.0" lane="10121_1" pos="270.02" length="50.00" period="60.00" file="outputs/dets/6.199_DVB.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.199_DVB1`.0" lane="10121_2" pos="270.02" length="50.00" period="60.00" file="outputs/dets/6.199_DVBa.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.836_DTA3.0" lane="10418_0" pos="28.32" length="60.00" period="60.00" file="outputs/dets/6.836_DTA3.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.836_DTB3.0" lane="10421_0" pos="125.63" length="60.00" period="60.00" file="outputs/dets/6.836_DTB3.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.836_DVA1.0" lane="10369_1" pos="28.15" length="60.00" period="60.00" file="outputs/dets/6.836_DVA1.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.836_DVA1a.0" lane="10369_2" pos="30.15" length="58.00" period="60.00" file="outputs/dets/6.836_DVA1a.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.836_DVB1.0" lane="10378_1" pos="125.84" length="60.00" period="60.00" file="outputs/dets/6.836_DVB1.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.836_DVB1a.0" lane="10378_2" pos="125.84" length="60.00" period="60.00" file="outputs/dets/6.836_DVB1a.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.998_DVA.0" lane="10238_1" pos="0.00" length="13.12" period="60.00" file="outputs/dets/6.998_DVA.0.out.xml" friendlyPos="1"/>
+    <laneAreaDetector id="6.998_DVA.1" lane="10128_1" pos="9.41" length="13.38" period="60.00" file="outputs/dets/6.998_DVA.1.out.xml" friendlyPos="1"/>
+</additional>
